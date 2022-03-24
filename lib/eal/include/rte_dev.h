@@ -69,6 +69,7 @@ struct rte_mem_resource {
 	uint64_t phys_addr; /**< Physical address, 0 if not resource. */
 	uint64_t len;       /**< Length of the resource. */
 	void *addr;         /**< Virtual address, NULL when not mapped. */
+	char *path;	    /**< Resource file path. */
 };
 
 /**
