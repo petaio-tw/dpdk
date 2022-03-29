@@ -360,7 +360,7 @@ pci_uio_map_resource_by_index(struct rte_pci_device *dev, int res_idx,
 	maps[map_idx].offset = 0;
 	strcpy(maps[map_idx].path, devname);
 	dev->mem_resource[res_idx].addr = mapaddr;
-
+	dev->mem_resource[res_idx].path = maps[map_idx].path;
 	return 0;
 
 error:
